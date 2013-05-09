@@ -18,16 +18,24 @@
 </head>
 <body>
 	
-	<h1>Hello there, PhoneGap! Revised 3.</h1>
+	<h1>Hello there, PhoneGap! Revised 4.</h1>
   <a id="set">SET</a>
   <a id="clear">CLEAR</a>
 	<div id="results"> </div>
+	
+	<a id="play">PLAY</a>
 	<script>
+	  var voice;
     $("#set").click(function(){
       $("#results").html("hello");
     });
     $("#clear").click(function(){
       $("#results").html(" ");
+    });
+    $("#play").click(function(){
+      voice.stop();
+      voice = new Media("http://www.daveberzack.com/songs/the_wanderer.mp3");
+      voice.play();
     });
 	</script>
 </body>
