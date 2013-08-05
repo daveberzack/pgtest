@@ -1,42 +1,42 @@
 <html>
+<head>
   <title>PG Test</title>
-
-  <style>
-      * {
-        margin:0px;
-        border:0px;
-        padding:0px; 
-      }
-      #results{
-        margin:20px;
-        border:1px solid #666;
-        padding:2px; 
-      }
-  </style>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/jquery.mobile-1.3.0.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
+
 <body>
 	
-	<h1>Test V6</h1>
+
+
+
+<div data-role="page" class="page" id="page-intro">
+  Intro
+<!--
+  <section data-role="content" class="ui-content" role="main">
+  </section>
+-->
+
+  <h1>Test V6</h1>
   <a id="set">SET</a>
   <a id="clear">CLEAR</a>
-	<div id="results"> </div>
-	
-	<a id="play">PLAY</a>
-	<script>
-	  var voice;
-    $("#set").click(function(){
-      $("#results").html("hello");
-    });
-    $("#clear").click(function(){
-      $("#results").html(" ");
-    });
-    $("#play").click(function(){
-      voice.stop();
-      voice = new Media("http://www.daveberzack.com/songs/the_wanderer.mp3");
-      voice.play();
-    });
-	</script>
+  <div id="results"> </div>
+  <a id="play">PLAY</a>
+
+</div>
+
+
+
+<div data-role="page" class="page" id="page-intro">
+  Intro
+<!--
+  <section data-role="content" class="ui-content" role="main">
+  </section>
+-->
+</div>
+
+
 </body>
 </html>
