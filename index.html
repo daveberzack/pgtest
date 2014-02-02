@@ -3,40 +3,20 @@
   <title>PG Test</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.8.3.min.js"></script>
-  <script src="js/jquery.mobile-1.3.0.min.js"></script>
 </head>
 
 <body>
-	
+
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
+<iframe class="youtube" src="http://www.youtube.com/embed/lNswy1aQsgw?autoplay=0&wmode=opaque&version=3&enablejsapi=1" id="yt1" width="960" height="541" frameborder="0" allowfullscreen></iframe>
 
 
-
-<div data-role="page" class="page" id="page-intro">
-  Intro
-<!--
-  <section data-role="content" class="ui-content" role="main">
-  </section>
--->
-
-  <h1>Test V6</h1>
-  <a id="set">SET</a>
-  <a id="clear">CLEAR</a>
-  <div id="results"> </div>
-  <a id="play">PLAY</a>
-
-</div>
-
-
-
-<div data-role="page" class="page" id="page-intro">
-  Intro
-<!--
-  <section data-role="content" class="ui-content" role="main">
-  </section>
--->
-</div>
-
-
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,23 +1,23 @@
+ $(function() {
 
-function onSoundSuccess(){
-  alert("sound success"); 
-}
-function onSoundError(){
-  alert("sound error"); 
-}
+  var ytPlayer;
+  function pauseVideo() {
+   if (typeof ytPlayer != "undefined") ytPlayer.stopVideo();
+  }
 
-var voice;
+  function playVideo(){
+    ytPlayer = new YT.Player('yt1', {
+      events: {
+        'onReady': function(){ currentYoutubePlayer.playVideo(); },
+        'onStateChange': function(e){ 
+          if (e.data === 0) { 
+            _gaq.push(["_trackEvent","PF2014 Video", "Finish", yTitle,0]);
+          }
+        }
+      }
+    });
 
-$("#set").click(function(){
-  console.log("!");
-  $("#results").html("hello");
+  }
+
+
 });
-$("#clear").click(function(){
-  $("#results").html(" ");
-});
-
-$("#play").click(function(){
-  voice = new Media("http://www.daveberzack.com/songs/the_wanderer.mp3", onSoundSuccess, onSoundError);
-  voice.play();
-});
-    
