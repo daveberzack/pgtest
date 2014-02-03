@@ -1,22 +1,21 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-  <title>PG Test</title>
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <script src="js/jquery-1.8.3.min.js"></script>
-</head>
-
-<body>
-
-<script>
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-</script>
-
-<iframe class="youtube" src="http://www.youtube.com/embed/lNswy1aQsgw?autoplay=0&wmode=opaque&version=3&enablejsapi=1" id="yt1" width="960" height="541" frameborder="0" allowfullscreen></iframe>
-
-
-<script src="js/script.js"></script>
-</body>
+    <head>
+        <title>Youtube</title>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="mainVideo"></div>
+        <div id="control">
+          <a href="#" id="pause">Pause</a>
+          <a href="#" id="play">Play</a>
+          <a href="#" id="play20">Play 20</a>
+          <a href="#" id="play590">Play 590</a>
+          <a href="#" id="cue20">Cue 20</a>
+          <a href="#" id="cue590">Cue 590</a>
+        </div>
+    </body>
 </html>
